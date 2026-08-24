@@ -3,7 +3,7 @@ import React from 'react';
 const loading = () => {
      return (
         <div className="container mx-auto px-4 py-10">
-            <div className="overflow-hidden rounded-3xl bg-white shadow-xl">
+            <div className="overflow-hidden rounded-3xl shadow-xl">
                 <div className="grid gap-8 md:grid-cols-2">
                     {/* Image Skeleton */}
                     <div className="h-[450px] animate-pulse bg-gray-300"></div>
