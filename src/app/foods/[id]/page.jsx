@@ -25,7 +25,7 @@ const FoodDetailsPage = async ({ params }) => {
 
     return (
         <div className="container mx-auto px-4 py-10">
-            <div className="overflow-hidden rounded-3xl bg-white shadow-xl">
+            <div className="overflow-hidden rounded-3xl bg-gray-500 shadow-xl">
                 <div className="grid gap-8 md:grid-cols-2">
                     {/* Image */}
                     <div>
