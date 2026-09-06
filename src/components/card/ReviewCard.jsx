@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const ReviewCard = ({review}) => {
@@ -6,11 +7,18 @@ const ReviewCard = ({review}) => {
             {/* User Info */}
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                    <img
+                    {/* <img
                         src={review.photo}
                         alt={review.user}
                         className="h-14 w-14 rounded-full object-cover"
-                    />
+                    /> */}
+
+                    <Image 
+                        src={review.photo}
+                        alt={review.user}
+                        width={56}
+                        height={56}
+                        className="h-14 w-14 rounded-full object-cover"/>
 
                     <div>
                         <h3 className="text-lg font-bold text-gray-800">
