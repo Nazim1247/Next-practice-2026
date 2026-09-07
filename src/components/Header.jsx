@@ -15,6 +15,7 @@ const Header = () => {
           <nav className='space-x-5'>
             <NavLink href={"/foods"}>Foods</NavLink>
             <NavLink href={"/reviews"}>Reviews</NavLink>
+            <NavLink href={"/feedback"}>Feedbacks</NavLink>
             <NavLink href={"/stores"}>Stores</NavLink>
             <NavLink href={"/about"}>About</NavLink>
             <NavLink href={"/login"}>Login</NavLink>
