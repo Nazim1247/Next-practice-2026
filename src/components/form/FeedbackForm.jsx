@@ -8,7 +8,7 @@ const FeedbackForm = () => {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         const message = e.target.message.value;
-        const res = await fetch('http://localhost:3000/api/feedback/', {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_URI}/api/feedback/`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",

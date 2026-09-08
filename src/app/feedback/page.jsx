@@ -2,9 +2,11 @@ import FeedbackCardPage from '@/components/card/FeedbackCard';
 import Link from 'next/link';
 import React from 'react';
 
+export const dynamic = "force-dynamic";
+
 const getFeedback = async()=>{
-    const res = await fetch("http://localhost:3000/api/feedback/", {
-        cache: "force-cache",
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URI}/api/feedback/`, {
+        // cache: "force-cache",
         next: {revalidate: 60},
     });
     return await res.json();

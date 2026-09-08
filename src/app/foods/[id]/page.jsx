@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { redirect } from "next/navigation";
 import React from "react";
 
 const getSingleFood = async (id) => {
@@ -13,14 +15,15 @@ const FoodDetailsPage = async ({ params }) => {
     const { id } = await params;
     const food = await getSingleFood(id);
 
-    if (!food) {
-        return (
-            <div className="py-20 text-center">
-                <h2 className="text-3xl font-bold text-red-500">
-                    Food Not Found
-                </h2>
-            </div>
-        );
+    if (!food.title) {
+        redirect("/foods")
+        // return (
+        //     <div className="py-20 text-center">
+        //         <h2 className="text-3xl font-bold text-red-500">
+        //             Food Not Found
+        //         </h2>
+        //     </div>
+        // );
     }
 
     return (
@@ -29,11 +32,17 @@ const FoodDetailsPage = async ({ params }) => {
                 <div className="grid gap-8 md:grid-cols-2">
                     {/* Image */}
                     <div>
-                        <img
+                        {/* <img
                             src={food.foodImg}
                             alt={food.title}
                             className="h-full w-full object-cover"
-                        />
+                        /> */}
+                        <Image 
+                        width={600}
+                        height={400}
+                        src={food.foodImg}
+                            alt={food.title}
+                            className="h-full w-full object-cover"/>
                     </div>
 
                     {/* Content */}

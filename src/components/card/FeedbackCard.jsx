@@ -15,6 +15,8 @@ const FeedbackCard = ({ feedback }) => {
             {/* <p className="text-sm text-gray-500 mb-5">
                 {format(new Date(date), "dd MMM yyyy, hh:mm a")}
             </p> */}
+            {new Date(feedback.date).toLocaleDateString()}, {}
+            {new Date(feedback.date).toLocaleTimeString()}
 
             {/* Buttons */}
             <div className="flex gap-3">
